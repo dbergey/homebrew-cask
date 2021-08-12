@@ -1,9 +1,16 @@
 cask "microsoft-edge" do
-  version "91.0.864.67"
-  sha256 "2bb1e36d9c69ef8020031e056942b222bd0b56fc82c361da75e0e4c0c5ac6abd"
+  version "92.0.902.67"
 
-  url "https://officecdn-microsoft-com.akamaized.net/pr/03ADF619-38C6-4249-95FF-4A01C0FFC962/MacAutoupdate/MicrosoftEdge-#{version}.pkg",
-      verified: "officecdn-microsoft-com.akamaized.net/"
+  if Hardware::CPU.intel?
+    url "https://officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/MicrosoftEdge-#{version}.pkg",
+        verified: "officecdn-microsoft-com.akamaized.net/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/"
+    sha256 "afb14750572b49c2ad5f25b637ffb3d637107e3db094b97b14a386a9f85a9af7"
+  else
+    url "https://officecdn-microsoft-com.akamaized.net/pr/03ADF619-38C6-4249-95FF-4A01C0FFC962/MacAutoupdate/MicrosoftEdge-#{version}.pkg",
+        verified: "officecdn-microsoft-com.akamaized.net/pr/03ADF619-38C6-4249-95FF-4A01C0FFC962/MacAutoupdate/"
+    sha256 "8ed41b289a0505c8882ae1e77c1542aa5d8c365d21b6514e406a4a8707da7fd8"
+  end
+
   name "Microsoft Edge"
   desc "Web browser"
   homepage "https://www.microsoft.com/edge"

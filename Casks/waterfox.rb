@@ -1,6 +1,6 @@
 cask "waterfox" do
-  version "3.2.3"
-  sha256 "d1c29651b3d39c509bab58054161ff60435fb639165d1c695078bd7e69a63c5a"
+  version "3.2.4.1"
+  sha256 "d5cf7a2652acbe4b2ef9724f8da9406e2c9ba986136dabbaa12754484ac11bae"
 
   url "https://cdn.waterfox.net/releases/osx64/installer/Waterfox%20G#{version}%20Setup.dmg"
   name "Waterfox"

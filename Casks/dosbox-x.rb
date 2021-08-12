@@ -1,7 +1,8 @@
 cask "dosbox-x" do
+  version "0.83.16,20210801002330"
+
   if Hardware::CPU.intel?
-    version "0.83.15,20210701214958"
-    sha256 "bad0d195ddbad0b2f187a4ab7a2b51bcb68b48c3edb7931d09cfb4c9add5fb2e"
+    sha256 "1b4c5690a798d9a40578cbad281b0ee03110cdbb2c97898a53f9838ad8cee588"
 
     url "https://github.com/joncampbell123/dosbox-x/releases/download/dosbox-x-v#{version.before_comma}/dosbox-x-macosx-x86_64-#{version.after_comma}.zip",
         verified: "github.com/joncampbell123/dosbox-x/"
@@ -14,8 +15,7 @@ cask "dosbox-x" do
       end
     end
   else
-    version "0.83.15,20210701214931"
-    sha256 "74b4d46a371f3c4eb73ff4ac39e22a8878f4610035b184b54e578234448c7fe9"
+    sha256 "b4c3b328e110d6d79a37f90fc12aef9f0105bc792f307adc9cc81827f05830b0"
 
     url "https://github.com/joncampbell123/dosbox-x/releases/download/dosbox-x-v#{version.before_comma}/dosbox-x-macosx-arm64-#{version.after_comma}.zip",
         verified: "github.com/joncampbell123/dosbox-x/"
